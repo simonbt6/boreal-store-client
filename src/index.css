@@ -1,0 +1,110 @@
+:root{
+  --background: rgb(0, 0, 0, 10);
+  --background-content: rgb(255, 255, 255, 10);
+  --blue: rgb(33, 150, 243, 1);
+}
+
+body {
+  margin: 0;
+  background-color: white !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.navbar{
+  background-color: var(--blue);
+  position: fixed !important;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 2px 2px 5px darkblue;
+}
+.navbar-light{
+  color: white;
+}
+.navbar-light .navbar-brand{
+  color:white !important;
+}
+.navbar-expand .navbar-collapse{
+  color: dark !important;
+  position: fixed !important;
+  right: 25px;
+  z-index: 1;
+}
+.navbar-text{
+  color:white;
+}
+.sidenav {
+  height: 100%;
+  width: 11vw;
+  position: fixed;
+  z-index: 1;
+  top: 56px;
+  left: 0;
+  background-color:var(--blue);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 1px 1px 3px darkblue;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+a{
+  color: white !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
+span{
+  color: white !important;
+}
+.App-header{
+  position: relative;
+}
+.contenty{
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 20px;
+  width: 88vw;
+  left: 11vw;
+  top: 56px;
+  background-color: var(--background-content);
+  overflow: hidden !important; 
+}
+.Search{
+  position: relative;
+  background-color: var(--background-content);
+}

@@ -1,0 +1,22 @@
+span#productName{
+    color: black !important;
+    font-size: xx-large;
+}
+.product-page-container
+{
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+}
+.product-page-container div
+{
+    display: contents;
+}
+.product-description-pane
+{
+    max-width: 20vw;
+}
+img
+{
+    size: 40vw;
+}

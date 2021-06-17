@@ -1,0 +1,41 @@
+
+
+.input-group-text{
+    color:black !important;
+}
+.App-header{
+    background-color: var(--background-content) !important;
+}
+.dashboard-container{
+    height: 10vh;
+}
+
+.productBox{
+    display: inline-block !important;
+    min-width: 100px;
+    max-width: 300px ;
+    min-height: 400px ;
+    max-height: 50%;
+    top: 0 !important;
+    margin: 5px;
+
+}
+.content-container{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.filters-container{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.dropdown button{
+    margin: 5px;
+}
+
+.dropdown-item{
+    color: black !important;
+}
