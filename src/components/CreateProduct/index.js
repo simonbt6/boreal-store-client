@@ -80,7 +80,7 @@ export default class CreateProduct extends React.Component{
         const response = await updateProduct(this.state.newProduct);
         const tags = this.state.newProduct.tags;
         // Checks if the response is OK.
-        if(response.status == 200){
+        if(response.status === 200){
             console.log("Everything works fine");
         }
         else{

@@ -1,22 +1,36 @@
-span#productName{
-    color: black !important;
-    font-size: xx-large;
-}
+
 .product-page-container
 {
     text-align: center;
     overflow: hidden;
     display: flex;
 }
-.product-page-container div
+
+.product-page-container 
+.product-information-pane
 {
-    display: contents;
+    display: flow-root;
 }
-.product-description-pane
+.product-page-container
+.product-information-pane
+.product-title-section
+#product-name
 {
-    max-width: 20vw;
+    color: black !important;
+    font-size: xx-large;
 }
-img
+
+.product-page-container
+.right-pane
+#product-image
 {
-    size: 40vw;
+    max-width: 30vw;
+}
+.MuiRating-icon
+{
+    color: gray !important;
+}
+.MuiRating-iconFilled
+{
+    color: var(--blue) !important;
 }

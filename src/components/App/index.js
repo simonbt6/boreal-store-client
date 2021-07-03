@@ -1,19 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
+// Css import
 import './App.css';
+
+// React imports
 import 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
-import Search from '../Search';
+import { Navbar, FormControl, Form } from 'react-bootstrap';
+import { useState } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+// Project imports
+import Search from '../Search';
 import Login from '../Login';
 import Dashboard from '../Dashboard';
 import Preferences from '../Preferences';
 import useToken from './useToken';
 import ProductPage from '../ProductPage';
-import {FormControl, Form} from 'react-bootstrap';
 import logo from '../../logo.png';
 import CreateProduct from '../CreateProduct';
-import { useState } from 'react';
 
+// Material UI imports
+import { Badge } from '@material-ui/core';
+import MailIcon from '@material-ui/icons/Mail';
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 async function searchItems(tags){
   console.log(JSON.stringify({
@@ -79,11 +89,19 @@ function App() {
           </Form>
           
           <Navbar.Text >
-            Signed in as: <a onClick={logout} href="#" id="logoutBtn" title="Logout" className="_username">{token.firstname + " " + token.lastname}</a>
+          <Badge badgeContent={4} color="primary" anchorOrigin={{ vertical: 'top', horizontal: 'right'}}>
+            <MailIcon />
+          </Badge>
+          <Badge></Badge>
+          <Badge>
+            <a onClick={logout} href="#" id="logoutBtn" title="Logout" className="_username">
+              <MeetingRoomIcon/>
+            </a>
+          </Badge>
           </Navbar.Text>
         </Navbar>
         <div className="contenty">
-          
+        <Switch>
           <Route exact path="/">
             <Dashboard />
           </Route>
@@ -103,8 +121,8 @@ function App() {
             <CreateProduct />
           </Route>
           <Route path="/product/:id" component={ProductPage}/>
+        </Switch>
         </div>
-        
     </Router>
     </div>
     
