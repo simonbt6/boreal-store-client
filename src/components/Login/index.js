@@ -9,6 +9,7 @@ import bootstrap from 'bootstrap';
 
 async function loginUser(credentials){
     return fetch('http://149.28.37.80/users/login', {
+        mode: 'cors',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -26,6 +27,7 @@ async function loginUser(credentials){
 async function registerUser(credentials){
     console.log(credentials);
     return fetch('http://149.28.37.80/users/create', {
+        mode: 'cors',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

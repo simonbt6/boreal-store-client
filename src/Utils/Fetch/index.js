@@ -12,7 +12,7 @@ export class FetchAPI extends React.Component{
      * @returns Single product matching ID.
      */
     static async getProduct(id){
-        return fetch('http://api.boreal-store.com/products/'+id, {method: 'GET'})
+        return fetch('http://api.boreal-store.com/products/'+id, { mode: 'cors', method: 'GET'})
         .then(data => data.json());
     }
 
@@ -21,7 +21,7 @@ export class FetchAPI extends React.Component{
      * @returns Array of all products.
      */
     static async getProducts(){
-        return fetch('http://api.boreal-store.com/products', {method: 'GET'})
+        return fetch('http://api.boreal-store.com/products', { mode: 'cors', method: 'GET'})
         .then(data => data.json());
     }
 
@@ -33,6 +33,7 @@ export class FetchAPI extends React.Component{
      */
     static async searchByTag(tags){
         return fetch('http://api.boreal-store.com/products/search', {
+            mode: 'cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,6 +52,7 @@ export class FetchAPI extends React.Component{
     static async getProductTags(productID)
     {
         return fetch('http://api.boreal-store.com/tags/' + productID, {
+            mode: 'cors',
             method: 'GET'
         }).then(data => data.json());
     }
